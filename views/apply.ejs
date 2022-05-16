@@ -7,6 +7,35 @@
     <%- include("./partials/nav.ejs") %>
     <main>
         <div class="container">
+            <div class="job-info">
+                <h1><%= data.title%></h1>
+                <hr>
+                <p><%= data.description %></p>
+                <ul>
+                    <li>Category: <%= data.category %></li>
+                    <li>Experience: <%= data.experience %></li>
+                    <li>Type: <%= data.type %></li>
+                </ul>
+            </div>
+            <form id="applyForm" method="POST" action='/'>
+                <label>First name</label>
+                <input type="text" name="first_name" id = "first_name" required="true">
+                <label>Last name</label>
+                <input type="text" name="last_name"  id = "last_name" required="true">
+                <label>Sex</label>
+                <select name="sex" id="sex">
+                    <option>M</option>
+                    <option>F</option>
+                </select>
+                <label>Birth date</label>
+                <input type="date" name="birth_date" id="birth_date" required="true">
+                <label>Email</label>
+                <input type="text" name="email" id="email" required="true">
+                <label>CV</label>
+                <input type="file" name="cv" id="cv" accept="application/pdf" required="true"> 
+                <button id="applyButton">APPLY</button>
+                <script src="scripts/apply.js"></script>
+            </form>
         </div>
     </main>
     <%- include("./partials/footer.ejs") %>

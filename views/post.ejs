@@ -7,14 +7,14 @@
     <%- include("./partials/nav.ejs") %>
     <main>
         <div class="container">
-            <form>
+            <form method="POST" action='/post'>
                 <h1>Job details</h1>
                 <label>Name</label>
-                <input type="text" required="true">
+                <input type="text" name="title" id = "title" required="true">
                 <label>Description</label>
-                <textarea rows="4" cols="50" required="true"></textarea>
+                <textarea rows="4" cols="50" name="description" id="descripton" required="true"></textarea>
                 <label>Category</label>
-                <select>
+                <select name="category" id="category">
                     <option>Cyber Security</option>
                     <option>Software development</option>
                     <option>IT infrastructure</option>
@@ -23,19 +23,19 @@
                     <option>Web developer</option>
                 </select>
                 <label>Experience</label>
-                <select>
+                <select name="experience" id="experience">
                     <option>Junior</option>
                     <option>Mid-level</option>
                     <option>Senior</option>
                 </select>
                 <label>Type</label>
-                <select>
+                <select name="type" id="type">
                     <option>Part-time</option>
                     <option>Full-time</option>
                     <option>Internship</option>
                 </select>
                 <label>Contact mail</label>
-                <input type="text" required="true">
+                <input type="text" name="email" id="email" required="true">
                 <button>POST</button>
             </form>
         </div>

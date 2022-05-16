@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head.ejs") %>
+
+<body>
+    <%- include("./partials/nav.ejs") %>
+    <main>
+        <div class="container">
+            <% data.forEach(element => { %>
+            <div class="job-info">
+                <h1><%= element.title%></h1>
+                <hr>
+                <p><%= element.description %></p>
+                <ul>
+                    <li>Category: <%= element.category %></li>
+                    <li>Experience: <%= element.experience %></li>
+                    <li>Type: <%= element.type %></li>
+                </ul>
+                <form id="applyButton" action="apply/<%= element.id%>" method="GET">
+                    <button>APPLY</button>
+                </form>
+            </div>
+            <% }); %>
+        </div>
+    </main>
+    <%- include("./partials/footer.ejs") %>
+</body>
+</html>
