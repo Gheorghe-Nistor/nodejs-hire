@@ -1,5 +1,5 @@
-const e = require('express');
 const express = require('express');
+const fs = require('fs');
 
 // express app
 const app = express();
@@ -19,6 +19,23 @@ app.get('/', (req, res) => {
 
 app.get('/post', (req, res) => {
     res.render('post', {title: 'Post', cssFile: 'post.css'});
+});
+
+app.get('/apply', (req, res) => {
+    res.render('apply', {title: 'Apply', cssFile: 'apply.css'});
+    fs.readFile('database/jobs.json', 'utf-8', (err, jsonString) => {
+        if(err)
+            console.log(err);
+        else {
+            try{
+                const data = JSON.parse(jsonString);
+                console.log(data.name);
+            }
+            catch(err){
+                console.log('Error parsing JSON', err);
+            }
+        }
+    })
 });
 
 app.use((req, res) => {
