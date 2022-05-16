@@ -322,6 +322,8 @@ body{
 }
 /* ===== FOOTER ===== */
 footer{
+    width: 100%;
+    background: #fff;
     color: black;
     font-size: 12px;
     font-weight: normal;
