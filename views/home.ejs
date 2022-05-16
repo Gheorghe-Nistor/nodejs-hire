@@ -1,46 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/style.css">
-    <link rel="icon" type="image/icon type" href="public/icon.ico">
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <script src="https://kit.fontawesome.com/1a09044287.js" crossorigin="anonymous"></script>
-    <title>HIRE | Home</title>
-</head>
+
+<%- include("./partials/head.ejs") %>
+
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <a id='logo' href="home.html">
-                <i class="fa-solid fa-suitcase"></i>
-                <img src="public/logo.png">
-            </a>
-            <ul>
-                <li>
-                    <a href="#">Home</a>
-                </li>
-                <li  id="jobsMenu">
-                    <span>Jobs <i class="fa-solid fa-caret-down"></i></span>
-                    <ul>
-                        <li>
-                            <a href="#">Post a job</a>
-                        </li>
-                        <li>
-                            <a href="#">Apply for a job</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a class='account' href="#">Sign up</a>
-                </li>
-                <li>
-                    <a class='account' href="#">Sign in</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <%- include("./partials/nav.ejs") %>
     <header class="header">
         <div class="header-layer">
             <div class="container">
@@ -48,7 +12,7 @@
                     <h1>Lorem ipsum dolor sit amet.</h1>
                     <p class="typewriter">Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
                 </div>
-                <img src="public/business-woman.png">
+                <img src="business-woman.png">
                 <i class="fa fa-angle-down"></i>
             </div>
         </div>
@@ -57,7 +21,7 @@
         <div class="container">
             <h1>What are you looking for?</h1>
             <div class="boxes">
-                <a href="#">
+                <a href="/post">
                     <div class="box">
                         <p>Post a job</p>
                     </div>
@@ -95,8 +59,6 @@
             </div>
         </div>
     </section>
-    <footer>
-        <h3>© George Nistor 2022</h3>
-    </footer>
+    <%- include("./partials/footer.ejs") %>
 </body>
 </html>

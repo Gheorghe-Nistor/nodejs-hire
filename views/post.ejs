@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head.ejs") %>
+
+<body>
+    <%- include("./partials/nav.ejs") %>
+    <main>
+        <div class="container">
+            <form>
+                <h1>Job details</h1>
+                <label>Name</label>
+                <input type="text" required="true">
+                <label>Description</label>
+                <textarea rows="4" cols="50" required="true"></textarea>
+                <label>Category</label>
+                <select>
+                    <option>Cyber Security</option>
+                    <option>Software development</option>
+                    <option>IT infrastructure</option>
+                    <option>IT support</option>
+                    <option>Data management</option>
+                    <option>Web developer</option>
+                </select>
+                <label>Experience</label>
+                <select>
+                    <option>Junior</option>
+                    <option>Mid-level</option>
+                    <option>Senior</option>
+                </select>
+                <label>Type</label>
+                <select>
+                    <option>Full-time</option>
+                    <option>Part-time</option>
+                    <option>Internship</option>
+                </select>
+                <label>Contact mail</label>
+                <input type="text" required="true">
+                <button>POST</button>
+            </form>
+        </div>
+    </main>
+    <%- include("./partials/footer.ejs") %>
+</body>
+</html>
