@@ -12,6 +12,7 @@ a, a:link, a:visited, a:hover, a:active{
     font-weight: inherit;
 }
 body{
+    position: relative;
     font-family: 'Poppins', sans-serif;
 }
 .container{
@@ -121,10 +122,11 @@ body{
         box-shadow: none;
     }
   }
-  
 /* ===== FOOTER ===== */
 footer{
     width: 100%;
+    position: relative;
+    bottom: 0;
     background: #fff;
     color: black;
     font-size: 12px;
