@@ -46,6 +46,9 @@ form button{
     user-select: none;
     border: none;
 }
+form label{
+    font-weight: bold;
+}
 form button:hover{
     background: #00C3ff;
 }

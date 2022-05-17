@@ -7,7 +7,7 @@
     <%- include("./partials/nav.ejs") %>
     <main>
         <div class="container">
-            <form method="POST" action='/post'>
+            <form method="POST" action='/post' id="postForm">
                 <h1>Job details</h1>
                 <label>Name</label>
                 <input type="text" name="title" id = "title" required="true">
@@ -21,6 +21,7 @@
                     <option>IT support</option>
                     <option>Data management</option>
                     <option>Web developer</option>
+                    <option>Other</option>
                 </select>
                 <label>Experience</label>
                 <select name="experience" id="experience">
@@ -34,12 +35,13 @@
                     <option>Full-time</option>
                     <option>Internship</option>
                 </select>
-                <label>Contact mail</label>
+                <label>Contact</label>
                 <input type="text" name="email" id="email" required="true">
-                <button>POST</button>
+                <button id="postButton">POST</button>
             </form>
         </div>
     </main>
     <%- include("./partials/footer.ejs") %>
+    <script src="scripts/post.js"></script>
 </body>
 </html>

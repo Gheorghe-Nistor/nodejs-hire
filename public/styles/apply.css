@@ -31,7 +31,7 @@ hr{
 main .container form{
     background: #fff;
     color: #000;
-    width: 300px;
+    width: 350px;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -39,6 +39,9 @@ main .container form{
 main .container form h1{
     text-align: center;
     font-size: 25px;
+}
+main .container form label{
+    font-weight: bold;
 }
 form > input, select{
     font-family: 'Poppins', sans-serif;
@@ -62,3 +65,17 @@ form button{
 }
 form button:hover{
     background: #00C3ff;
+}
+
+#resetButton{
+    background-color: darkred;
+    font-size: 12px;
+    width: 120px;
+}
+#resetButton:hover{
+    background-color: rgb(164, 3, 3);
+}
+.disable{
+    pointer-events:none;
+    color: gray;
+}

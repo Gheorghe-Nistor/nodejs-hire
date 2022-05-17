@@ -1,6 +1,6 @@
 [
   {
-    "title": "Job #1",
+    "title": "Job #0",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?",
     "category": "Cyber Security",
     "experience": "Junior",
@@ -9,7 +9,7 @@
     "id": 0
   },
   {
-    "title": "Job #2",
+    "title": "Job #1",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?",
     "category": "IT support",
     "experience": "Junior",
@@ -18,7 +18,7 @@
     "id": 1
   },
   {
-    "title": "Job #3",
+    "title": "Job #2",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?",
     "category": "Web developer",
     "experience": "Mid-level",

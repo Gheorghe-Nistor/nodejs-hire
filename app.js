@@ -1,8 +1,20 @@
 const { response } = require('express');
 const express = require('express');
-var bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 const fs = require('fs');
+const nodemailer = require('nodemailer');
+require('dotenv').config();
+const fileupload = require("express-fileupload");
 const { nextTick } = require('process');
+
+let transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: process.env.EMAIL,
+        pass: process.env.PASSWORD
+    },
+    secure: true,
+});
 
 // express app
 const app = express();
@@ -10,11 +22,13 @@ const app = express();
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
+app.use(fileupload());
+
 var data = [], index = 0;
 
 fs.readFile('data/jobs.json', 'utf-8', (err, jsonString) => {
     if(err)
-        console.log(err);
+        console.log('Error occur');
     else {
         try{
             let old_data = JSON.parse(jsonString);
@@ -53,7 +67,6 @@ app.post('/post', (req, res) => {
     res.redirect(`/apply/${index-1}`);
 });
 app.get('/jobs', (req, res) => {
-    console.log(data);
     res.render('jobs', {title: 'Jobs', cssFile: 'jobs.css', data});
 });
 app.get('/apply/:id', (req, res, next) => {
@@ -63,6 +76,40 @@ app.get('/apply/:id', (req, res, next) => {
     else
         next();
 });
+app.post('/apply', (req, res) => {
+    let id = req.body.job_id;
+    let mailOptions = {
+        from: 'nistorgeorge666@gmail.com',
+        to: data[id].email,
+        subject: `${data[id].title}: ${req.body.first_name} ${req.body.last_name}`,
+        attachments:[
+            {
+                filename: req.files.cv.name,
+                path: req.files.cv.path
+            }
+        ],
+        text:
+        `-----> Job information <-----
+Title: ${data[id].title}
+Description: ${data[id].description}
+Category: ${data[id].category}
+Experience: ${data[id].experience}
+Type: ${data[id].type}
+
+-----> Employee information <-----
+First name:  ${req.body.first_name}
+Last name: ${req.body.last_name}
+Sex: ${req.body.sex}
+Birth date: ${req.body.birth_date}
+Phone number: ${req.body.phone_number}
+Email: ${req.body.email}`
+    };
+    transporter.sendMail(mailOptions, function(err, data){
+        if(err)
+            console.log(err);
+    });
+    res.redirect('/');
+})
 app.use((req, res) => {
     res.status(404).render('404', { title: '404', cssFile: '404.css'});
 })

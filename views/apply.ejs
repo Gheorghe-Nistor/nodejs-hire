@@ -15,29 +15,35 @@
                     <li>Category: <%= data.category %></li>
                     <li>Experience: <%= data.experience %></li>
                     <li>Type: <%= data.type %></li>
+                    <li>Contact: <%= data.email%></li>
                 </ul>
             </div>
-            <form id="applyForm" method="POST" action='/'>
+            <form id="applyForm" method="POST" action='/apply' enctype="multipart/form-data">
+                <label>Job ID</label>
+                <input type="text" name="job_id" class='disable' value="<%= data.id%>"> 
                 <label>First name</label>
                 <input type="text" name="first_name" id = "first_name" required="true">
                 <label>Last name</label>
                 <input type="text" name="last_name"  id = "last_name" required="true">
                 <label>Sex</label>
                 <select name="sex" id="sex">
-                    <option>M</option>
+                    ><option>M</option>
                     <option>F</option>
                 </select>
                 <label>Birth date</label>
                 <input type="date" name="birth_date" id="birth_date" required="true">
+                <label>Phone number</label>
+                <input type="tel" name="phone_number" id="phone_number" required="true">
                 <label>Email</label>
                 <input type="text" name="email" id="email" required="true">
                 <label>CV</label>
                 <input type="file" name="cv" id="cv" accept="application/pdf" required="true"> 
                 <button id="applyButton">APPLY</button>
-                <script src="scripts/apply.js"></script>
+                <button type="button" id="resetButton">RESET FORM</button>
             </form>
         </div>
     </main>
     <%- include("./partials/footer.ejs") %>
+    <script src="scripts/apply.js"></script>
 </body>
 </html>
