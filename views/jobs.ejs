@@ -9,6 +9,9 @@
         <div class="container">
             <% data.forEach(element => { %>
             <div class="job-info">
+                <% if(authenticated){ %>
+                    <span>Job id: <%= element.id%> </span>
+                <% }%>  
                 <h1><%= element.title%></h1>
                 <hr>
                 <p><%= element.description %></p>
@@ -24,6 +27,8 @@
             <% }); %>
         </div>
     </main>
+    <script>var authenticated =( <%= authenticated %> || false);</script>
+    <script src="scripts/jobs.js"></script>
     <%- include("./partials/footer.ejs") %>
 </body>
 </html>

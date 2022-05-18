@@ -21,6 +21,11 @@ main .container .job-info{
     color: #fff;
     background: rgba(0, 0, 0, 0.7);
 }
+.job-info span{
+    align-self: flex-end;
+    color: darkred;
+    font-weight: bold;
+}
 hr{
     width: 100%;
     border: 1.5px solid #fff;

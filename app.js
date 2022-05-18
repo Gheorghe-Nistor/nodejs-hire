@@ -7,7 +7,7 @@ const fs = require('fs');
 const nodemailer = require('nodemailer');
 require('dotenv').config();
 const fileupload = require("express-fileupload");
-const { nextTick } = require('process');
+const { nextTick, env } = require('process');
 
 let transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -45,12 +45,21 @@ fs.readFile('data/jobs.json', 'utf-8', (err, jsonString) => {
 })
 
 app.use(session({
-    secret: 'aaaa',
+    secret: process.env.SESSION,
     cookie: {maxAge: 300000},
     saveUninitialized: false,
     resave: true,
     store
 }));
+
+app.use(function(req, res, next) {
+    if(req.session.authenticated == undefined)
+        res.locals.authenticated = false;
+    else
+        res.locals.authenticated = req.session.authenticated;
+    next();
+});
+
 // listen for requests
 app.listen(3000);
 
@@ -58,10 +67,7 @@ app.listen(3000);
 app.set('view engine', 'ejs');
 
 // middleware & static files
-app.use(function(req, res, next) {
-    res.locals.authenticated = req.session.authenticated;
-    next();
-});
+
 
 app.use(express.static(__dirname + '/public'));
 
@@ -70,23 +76,26 @@ app.use('/apply', express.static(__dirname + '/public'));
 app.get('/', (req, res) => {
     res.render('home', {title: 'Home', cssFile: 'home.css'});
 });
+app.get('/home', (req, res) => {
+    res.redirect('/');
+})
 app.get('/login', (req, res) => {
     if(req.session.authenticated){
         req.session.destroy();
         res.redirect('/');
+    } else{
+        res.render('login', {title: 'Login', message: "", cssFile: 'login.css'});
     }
-    res.render('login', {title: 'Login', message: "", cssFile: 'login.css'})
 })
 app.post('/login', (req, res) => {
     const {username, password} = req.body;
-    if(username=="admin" && password=="admin404"){
+    if(username==process.env.ADMIN_USERNAME && password==process.env.ADMIN_PASSWORD){
         req.session.authenticated = true;
-        req.session.user = {
-        username, password
-        };
+        req.session.user = {username, password};
         res.redirect('/');
+    } else {
+        res.render('login', {title: 'Login', message: "Authentication failed!", cssFile: 'login.css'})
     }
-    res.render('login', {title: 'Login', message: "Authentication failed!", cssFile: 'login.css'})
 });
 app.get('/post', (req, res) => {
     res.render('post', {title: 'Post', cssFile: 'post.css'});
