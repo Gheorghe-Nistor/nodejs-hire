@@ -20,10 +20,13 @@
                 </ul>
             </li>
             <li>
-                <a class='account' href="/signup">Sign up</a>
-            </li>
-            <li>
-                <a class='account' href="/signin">Sign in</a>
+                <a class='account' href="/login">
+                    <% if(authenticated){ %>
+                        Logout <span> admin </span>
+                      <% } else{ %>  
+                        Login
+                     <% } %>
+                </a>
             </li>
         </ul>
     </div>

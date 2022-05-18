@@ -69,6 +69,9 @@ body{
     color: #000;
     background-color: #FF8E00;
 }
+.account span{
+    font-size: 12px;
+}
 #jobsMenu{
     position: relative;
 }

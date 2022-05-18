@@ -1,5 +1,7 @@
 const { response } = require('express');
 const express = require('express');
+const session = require('express-session');
+const store = new session.MemoryStore();
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const nodemailer = require('nodemailer');
@@ -42,6 +44,13 @@ fs.readFile('data/jobs.json', 'utf-8', (err, jsonString) => {
     }
 })
 
+app.use(session({
+    secret: 'aaaa',
+    cookie: {maxAge: 300000},
+    saveUninitialized: false,
+    resave: true,
+    store
+}));
 // listen for requests
 app.listen(3000);
 
@@ -49,6 +58,11 @@ app.listen(3000);
 app.set('view engine', 'ejs');
 
 // middleware & static files
+app.use(function(req, res, next) {
+    res.locals.authenticated = req.session.authenticated;
+    next();
+});
+
 app.use(express.static(__dirname + '/public'));
 
 app.use('/apply', express.static(__dirname + '/public'));
@@ -56,7 +70,24 @@ app.use('/apply', express.static(__dirname + '/public'));
 app.get('/', (req, res) => {
     res.render('home', {title: 'Home', cssFile: 'home.css'});
 });
-
+app.get('/login', (req, res) => {
+    if(req.session.authenticated){
+        req.session.destroy();
+        res.redirect('/');
+    }
+    res.render('login', {title: 'Login', message: "", cssFile: 'login.css'})
+})
+app.post('/login', (req, res) => {
+    const {username, password} = req.body;
+    if(username=="admin" && password=="admin404"){
+        req.session.authenticated = true;
+        req.session.user = {
+        username, password
+        };
+        res.redirect('/');
+    }
+    res.render('login', {title: 'Login', message: "Authentication failed!", cssFile: 'login.css'})
+});
 app.get('/post', (req, res) => {
     res.render('post', {title: 'Post', cssFile: 'post.css'});
 });
