@@ -1,29 +1,32 @@
 [
   {
-    "title": "Job #0",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?",
-    "category": "Cyber Security",
+    "title": "Web Development - Internship for students  ",
+    "description": "A web developer's job is to create websites. While their primary role is to ensure the website is visually appealing and easy to navigate, many web developers are also responsible for the website's performance and capacity.",
+    "category": "Web developer",
     "experience": "Junior",
     "type": "Internship",
     "email": "nistorgeorge404@gmail.com",
+    "date": "19.05.2022",
     "id": 0
   },
   {
-    "title": "Job #1",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?",
-    "category": "IT support",
-    "experience": "Junior",
-    "type": "Full-time",
-    "email": "nistorgeorge404@gmail.com",
-    "id": 1
-  },
-  {
-    "title": "Job #2",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?",
-    "category": "Web developer",
+    "title": "Cyber Security job",
+    "description": "Cybersecurity analysts protect computer networks from cyberattacks and unauthorized access. They do this by trying to anticipate and defend against cyber threats, and responding to security breaches when they do happen. In this job, you play a key role in protecting your organization's valuable data",
+    "category": "Cyber Security",
     "experience": "Mid-level",
     "type": "Part-time",
     "email": "nistorgeorge404@gmail.com",
+    "date": "19.05.2022",
+    "id": 1
+  },
+  {
+    "title": "Data Management Specialist",
+    "description": "What Do Data Management Specialists Do? Design, develop, maintain, manage, and report on databases and data updates. Design data tracking and monitoring tools. Provide support for data management activities and attend relevant meetings as the expert.",
+    "category": "Data management",
+    "experience": "Senior",
+    "type": "Full-time",
+    "email": "nistorgeorge404@gmail.com",
+    "date": "19.05.2022",
     "id": 2
   }
 ]

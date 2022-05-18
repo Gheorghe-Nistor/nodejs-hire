@@ -101,8 +101,10 @@ app.get('/post', (req, res) => {
     res.render('post', {title: 'Post', cssFile: 'post.css'});
 });
 app.post('/post', (req, res) => {
-    data[index++] = req.body;
-    data[index-1].id = index-1;
+    data[index] = req.body;
+    data[index].date = new Date(Date.now()).toLocaleString().split(',')[0];
+    data[index].id = index;
+    index++;
     fs.writeFileSync('data/jobs.json', JSON.stringify(data, null, 2));
     res.redirect(`/apply/${index-1}`);
 });

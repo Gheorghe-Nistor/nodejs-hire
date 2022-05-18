@@ -13,6 +13,7 @@
                     <span>Job id: <%= element.id%> </span>
                 <% }%>  
                 <h1><%= element.title%></h1>
+                <p><%= element.date%></p>
                 <hr>
                 <p><%= element.description %></p>
                 <ul>
@@ -27,7 +28,7 @@
             <% }); %>
         </div>
     </main>
-    <script>var authenticated =( <%= authenticated %> || false);</script>
+    <script>var authenticated = <%= authenticated %> ;</script>
     <script src="scripts/jobs.js"></script>
     <%- include("./partials/footer.ejs") %>
 </body>
