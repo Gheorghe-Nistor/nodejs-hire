@@ -9,14 +9,17 @@ function handleFormSubmit(e){
     if(firstName == ' ' || lastName == ' ' || ! /^[a-zA-Z]+$/.test(firstName) || ! /^[a-zA-Z]+$/.test(lastName)){
         e.preventDefault();
         alert("Name must contain only letters!");
+        return;
     }
     if(! /^\d{10}$/.test(phoneNumber)){
         e.preventDefault();
         alert("Invalid phone number!");
+        return;
     }
     if(! /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)){
         e.preventDefault();
         alert("Invalid email adress!");
+        return;
     }
     localStorage.setItem('firstName', firstName);
     localStorage.setItem('lastName',  lastName);

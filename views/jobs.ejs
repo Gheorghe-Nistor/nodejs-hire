@@ -17,9 +17,9 @@
                 <hr>
                 <p><%= element.description %></p>
                 <ul>
-                    <li>Category: <%= element.category %></li>
-                    <li>Experience: <%= element.experience %></li>
-                    <li>Type: <%= element.type %></li>
+                    <li><i class="fa-solid fa-circle-dot"></i>Category: <%= element.category %></li>
+                    <li><i class="fa-solid fa-circle-dot"></i>Experience: <%= element.experience %></li>
+                    <li><i class="fa-solid fa-circle-dot"></i>Type: <%= element.type %></li>
                 </ul>
                 <form id="applyButton" action="apply/<%= element.id%>" method="GET">
                     <button>APPLY</button>

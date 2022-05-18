@@ -13,10 +13,10 @@
                 <hr>
                 <p><%= data.description %></p>
                 <ul>
-                    <li>Category: <%= data.category %></li>
-                    <li>Experience: <%= data.experience %></li>
-                    <li>Type: <%= data.type %></li>
-                    <li>Contact: <%= data.email%></li>
+                    <li><i class="fa-solid fa-circle-dot"></i>Category: <%= data.category %></li>
+                    <li><i class="fa-solid fa-circle-dot"></i>Experience: <%= data.experience %></li>
+                    <li><i class="fa-solid fa-circle-dot"></i>Type: <%= data.type %></li>
+                    <li><i class="fa-solid fa-circle-dot"></i>Contact: <%= data.email%></li>
                 </ul>
             </div>
             <form id="applyForm" method="POST" action='/apply' enctype="multipart/form-data">

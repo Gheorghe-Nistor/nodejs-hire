@@ -60,14 +60,9 @@ app.use(function(req, res, next) {
     next();
 });
 
-// listen for requests
 app.listen(3000);
 
-// register view engine
 app.set('view engine', 'ejs');
-
-// middleware & static files
-
 
 app.use(express.static(__dirname + '/public'));
 
@@ -133,6 +128,7 @@ app.post('/apply', (req, res) => {
         text:
         `-----> Job information <-----
 Title: ${data[id].title}
+Date: ${data[id].date}
 Description: ${data[id].description}
 Category: ${data[id].category}
 Experience: ${data[id].experience}
