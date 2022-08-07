@@ -30,7 +30,7 @@ var data = [], index = 0;
 
 fs.readFile('data/jobs.json', 'utf-8', (err, jsonString) => {
     if(err)
-        console.log('Error occur');
+        console.log('Error occurred!');
     else {
         try{
             let old_data = JSON.parse(jsonString);
@@ -60,7 +60,7 @@ app.use(function(req, res, next) {
     next();
 });
 
-app.listen(3000);
+app.listen( 5000);
 
 app.set('view engine', 'ejs');
 

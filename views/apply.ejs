@@ -11,7 +11,7 @@
                 <h1><%= data.title%></h1>
                 <p><%= data.date%></p>
                 <hr>
-                <p><%= data.description %></p>
+                <p style="white-space: pre-wrap"><%= data.description %></p>
                 <ul>
                     <li><i class="fa-solid fa-circle-dot"></i>Category: <%= data.category %></li>
                     <li><i class="fa-solid fa-circle-dot"></i>Experience: <%= data.experience %></li>
@@ -41,6 +41,10 @@
                 <input type="file" name="cv" id="cv" accept="application/pdf" required="true"> 
                 <button id="applyButton">APPLY</button>
                 <button type="button" id="resetButton">RESET FORM</button>
+                <p id="info"> 
+                    <i class="fa-solid fa-circle-info"></i>
+                    Once you have applied for a job, the data from the form will be saved in your local storage to easily apply to future jobs.
+                </p>
             </form>
         </div>
     </main>

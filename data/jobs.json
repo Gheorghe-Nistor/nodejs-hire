@@ -1,32 +1,52 @@
 [
   {
-    "title": "Web Development - Internship for students  ",
-    "description": "A web developer's job is to create websites. While their primary role is to ensure the website is visually appealing and easy to navigate, many web developers are also responsible for the website's performance and capacity.",
-    "category": "Web developer",
-    "experience": "Junior",
-    "type": "Internship",
-    "email": "nistorgeorge404@gmail.com",
-    "date": "19.05.2022",
+    "title": "Frontend Developer",
+    "description": "We are looking for self-motivated, talented individuals to develop software, evolve our product and build resilient, reactive and scalable systems that provide an awesome user experience.\r\nIn terms of the global group, the successful candidate will be expected to first understand the current technology landscape, rapidly upskill in domain knowledge and then work with architecture to realise the evolution of our product.\r\nThis role will require a person with strong technical skills and proven experience in working in a dynamic, high performance technical team.\r\nJoin us in our journey to build a new vision of our future!",
+    "category": "Web Dev",
+    "experience": "Mid-level",
+    "type": "Part-time",
+    "email": "nistorgeorge404@yahoo.com",
+    "date": "07.08.2022",
     "id": 0
   },
   {
-    "title": "Cyber Security job",
-    "description": "Cybersecurity analysts protect computer networks from cyberattacks and unauthorized access. They do this by trying to anticipate and defend against cyber threats, and responding to security breaches when they do happen. In this job, you play a key role in protecting your organization's valuable data",
-    "category": "Cyber Security",
-    "experience": "Mid-level",
+    "title": "Decision Analytics Data Management",
+    "description": "Bachelor’s/Master's degree in economics, mathematics, computer science/engineering, operations research or related analytics areas;\r\n8+ years of experience in reporting & transformation, analytics, dash boarding, ETL, Python and associated data management;\r\nSuperior analytical and problem solving skills;\r\nMust have consulting back ground with structured thinking;\r\nStrong familiarity with BI tools (Tableau, Power BI) and related software applications\r\nGood knowledge of data base management and SQL, VBA, Hadoop/Spark, and ETL tools.\r\nAbility to understand data models and identify ETL optimization opportunities. Exposure to ETL tools is mandate\r\nShould have strong grasp of advanced SQL functionalities (joins, nested query, and procedures);",
+    "category": "Data management",
+    "experience": "Senior",
     "type": "Part-time",
-    "email": "nistorgeorge404@gmail.com",
-    "date": "19.05.2022",
+    "email": "nistorgeorge404@yahoo.com",
+    "date": "07.08.2022",
     "id": 1
   },
   {
-    "title": "Data Management Specialist",
-    "description": "What Do Data Management Specialists Do? Design, develop, maintain, manage, and report on databases and data updates. Design data tracking and monitoring tools. Provide support for data management activities and attend relevant meetings as the expert.",
-    "category": "Data management",
-    "experience": "Senior",
+    "title": "Information Security Engineer",
+    "description": "The Ideal Candidate:\r\n- BS degree in computing, information security, or a related field. MS is preferred.\r\n- 10+ years of information security experience is also acceptable in lieu of a degree.\r\n- Industry certifications preferred – for example CISSP, CISA, CEH, OSCP, Security+\r\n- Strong experience with Microsoft Windows, MacOS and Linux operating systems.\r\n- Strong experience with AWS security & configuration best practices and tools.\r\n- Strong experience in network security including next gen firewalls, IDS/IPS, VPN and WAF.\r\n- Strong experience using vulnerability management tools, for example Tenable, Qualys, Veracode.\r\n- Experience deploying security controls in a SOC2 environment.\r\n- Experience working with SIEM tools, for example LogRhythm, QRadar, Splunk.\r\n- Experience with script-based automation, including Kubernetes, Ansible, Python.\r\n- Experience with incident response, forensics and evidence preservation.\r\n- Experience working in a global, multi-time zone business.\r\n- Strong communications skills – an ability to communicate technical security requirements to business units, set strategy, and implement security initiatives.",
+    "category": "Cyber Security",
+    "experience": "Junior",
     "type": "Full-time",
-    "email": "nistorgeorge404@gmail.com",
-    "date": "19.05.2022",
+    "email": "nistorgeorge404@yahoo.com",
+    "date": "07.08.2022",
     "id": 2
+  },
+  {
+    "title": "IT Support Technician",
+    "description": "The Ideal Candidate:\r\n- New to the tech industry? Look no further, we are recruiting a Junior IT Support Specialist to join us in our Targu-Mures office.\r\n-  If you like to help people and wish to work in growing tech company, then this is your stop. \r\n- We will make sure that you fit right in and offer our time and effort to teach you the trade.",
+    "category": "IT support",
+    "experience": "Junior",
+    "type": "Part-time",
+    "email": "nistorgeorge404@yahoo.com",
+    "date": "07.08.2022",
+    "id": 3
+  },
+  {
+    "title": "Backend Developer",
+    "description": "The projects we develop require:\r\n- Minimum of 3 years experience in C#/.NET Core 3.1 and above. \r\n- Good knowledge in REST APIs, Entity Framework, Microsoft SQL Server Management, .NET Core Identity. \r\n- Good understanding of OOP principles & patterns.\r\n- Experience with version control using Git. Be able to review design proposals and pull requests.\r\n- Experience in working in agile environments. Proactive in helping the team on the .NET stack.\r\n\r\nGood to have:\r\n- Basic knowledge of Microsoft Azure, CI/CD pipelines. \r\n- Basic knowledge of Angular (or similar UI framework).\r\n- Unit Testing / Automation experience.\r\n",
+    "category": "Web Dev",
+    "experience": "Mid-level",
+    "type": "Full-time",
+    "email": "nistorgeorge404@yahoo.com",
+    "date": "07.08.2022",
+    "id": 4
   }
 ]

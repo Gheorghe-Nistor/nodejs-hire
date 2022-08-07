@@ -21,8 +21,8 @@ function handleFormSubmit(e){
         alert("Invalid email adress!");
         return;
     }
-    localStorage.setItem('firstName', firstName);
-    localStorage.setItem('lastName',  lastName);
+    localStorage.setItem('firstName', firstName.toUpperCase());
+    localStorage.setItem('lastName',  lastName.toUpperCase());
     localStorage.setItem('sex', sex);
     localStorage.setItem('birthDate', birthDate);
     localStorage.setItem('phoneNumber', phoneNumber);

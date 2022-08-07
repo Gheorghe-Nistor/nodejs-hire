@@ -15,7 +15,7 @@
                 <h1><%= element.title%></h1>
                 <p><%= element.date%></p>
                 <hr>
-                <p><%= element.description %></p>
+                <p style="white-space: pre-wrap"><%= element.description %></p>
                 <ul>
                     <li><i class="fa-solid fa-circle-dot"></i>Category: <%= element.category %></li>
                     <li><i class="fa-solid fa-circle-dot"></i>Experience: <%= element.experience %></li>
@@ -27,7 +27,7 @@
             </div>
             <% }); %>
         </div>
-    </main>
+    </main> 
     <script>var authenticated = <%= authenticated %> ;</script>
     <script src="scripts/jobs.js"></script>
     <%- include("./partials/footer.ejs") %>

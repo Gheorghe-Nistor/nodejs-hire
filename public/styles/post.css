@@ -25,6 +25,7 @@ main .container form h1{
 }
 textarea{
     resize: none;
+    white-space: pre-wrap;
 }
 form > input, textarea, select {
     font-family: 'Poppins', sans-serif;
