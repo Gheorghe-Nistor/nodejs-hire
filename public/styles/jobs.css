@@ -58,3 +58,8 @@ form button{
 form button:hover{
     background: #00C3ff;
 }
+@media only screen and (max-width: 500px){
+    main .container .job-info{
+        width: 100%;
+    }
+}
